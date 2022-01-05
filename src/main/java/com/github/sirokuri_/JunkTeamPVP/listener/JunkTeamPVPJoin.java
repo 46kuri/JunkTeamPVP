@@ -21,11 +21,11 @@ public class JunkTeamPVPJoin implements Listener {
     }
 
     @EventHandler
-    public void onInteract(PlayerInteractEvent e) {
-        Player player = e.getPlayer();
-        Block block = e.getClickedBlock();
+    public void onInteract(PlayerInteractEvent event) {
+        Player player = event.getPlayer();
+        Block block = event.getClickedBlock();
         if (block == null) return;
-        if ((e.getHand() != EquipmentSlot.HAND || e.getAction() == Action.LEFT_CLICK_BLOCK)) return;
+        if ((event.getHand() != EquipmentSlot.HAND || event.getAction() == Action.LEFT_CLICK_BLOCK)) return;
         if (!(block.getType() == Material.OAK_WALL_SIGN)) return;
         Sign sign = (Sign) block.getState();
         String firstSignLine = sign.getLine(0);
