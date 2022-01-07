@@ -1,9 +1,9 @@
 package com.github.sirokuri_.JunkTeamPVP;
 
+import com.github.sirokuri_.JunkTeamPVP.listener.JunkTeamPVPBlockBreak;
 import com.github.sirokuri_.JunkTeamPVP.listener.JunkTeamPVPGuard;
 import com.github.sirokuri_.JunkTeamPVP.listener.JunkTeamPVPJoin;
 import com.github.sirokuri_.JunkTeamPVP.listener.JunkTeamPVPStartTimer;
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -21,13 +21,15 @@ public class JunkTeamPVP extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        Bukkit.getPluginManager().registerEvents(new JunkTeamPVPJoin(this), this);
-        Bukkit.getPluginManager().registerEvents(new JunkTeamPVPGuard(this), this);
-        Bukkit.getPluginManager().registerEvents(new JunkTeamPVPStartTimer(this), this);
+        getServer().getPluginManager().registerEvents(new JunkTeamPVPJoin(this), this);
+        getServer().getPluginManager().registerEvents(new JunkTeamPVPGuard(this), this);
+        getServer().getPluginManager().registerEvents(new JunkTeamPVPStartTimer(this), this);
+        getServer().getPluginManager().registerEvents(new JunkTeamPVPBlockBreak(this), this);
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
+
     }
 }
