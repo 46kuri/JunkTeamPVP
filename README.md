@@ -1,2 +1,2 @@
 # JunkTeamPVP
-アジ鯖 JunkGames serverで使用予定のplugin
+アジ鯖 JunkGames serverで使用中のplugin
