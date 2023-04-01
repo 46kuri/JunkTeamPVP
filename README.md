@@ -1,2 +1,2 @@
 # JunkTeamPVP
-アジ鯖 JunkGames serverで使用中のplugin
+PVP plugin for junkGames server in Azisaba Network
